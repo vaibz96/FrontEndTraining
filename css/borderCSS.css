@@ -1,0 +1,15 @@
+#d1{
+    border-color: cyan;
+    border-width: 10px;
+    border-style: solid;
+}
+
+#d2{
+    border-color: goldenrod;
+    border-width: 10px;
+    border-style: solid;
+}
+
+#d3{
+    border: solid 10px yellowgreen;
+}
