@@ -1,0 +1,25 @@
+<div>
+    <input type="button" value="Call Serice Without DI" (click)="fun()"/>
+    <br/>
+    {{msg1}}
+    <br/>
+    <input type="button" value="Call Serice With DI" (click)="display()"/>
+    <br/>
+    {{msg2}}
+    <br/>
+    <input type="button" value="Call Fake Service" (click)="callFakeService()"/>
+    <table border="2">
+        <tr>
+            <th>UserID</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Completed</th>
+        </tr>
+        <tr *ngFor="let data of fakeData">
+            <td>{{data.userId}}</td>
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.completed}}</td>
+        </tr>
+    </table>
+</div>

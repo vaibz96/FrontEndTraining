@@ -2,10 +2,12 @@
     <h2>Login Page using Template Driven Form</h2>
     <form #userRef="ngForm" (ngSubmit)="checkUser(userRef.value)">
         <label>UserName </label>
-        <input type="text" name="user" ngModel/><br/>
+        <input type="text" name="user" ngModel required minlength="2"/><br/>
         <label>Password </label>
-        <input type="password" name="pass" ngModel/><br/>
-        <input type="submit" name="submit"/>
+        <input type="password" name="pass" ngModel required pattern="TCS\d{3}"/><br/>
+        <input type="submit" name="submit" [disabled]="!userRef.valid"/>
+        {{userRef.valid}}
+
         <input type="reset" name="reset"/><br/>
     </form>
     {{msg}}

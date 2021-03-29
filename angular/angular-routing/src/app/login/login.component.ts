@@ -15,6 +15,8 @@ export class LoginComponent implements OnInit {
   }
 
   homePage(){
+    // Token must be stored when username and the password is authenticated
+    sessionStorage.setItem("token", "123");
     this.router.navigate(["home"]);
   }
 
