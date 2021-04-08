@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { Child2Component } from './child2/child2.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'component-communication';
+  parentName:string="";
+  childAge?:number;
+
+  @ViewChild(Child2Component)
+  child2?:Child2Component;
+
+  childDesg?:string;
+
+  passName(name:any){
+    this.parentName=name;
+  }
+  products:Array<string>=new Array();
+  addProduct(productName:any){
+    this.products.push(productName);
+  }
+
+  callChild2Function(){
+    this.child2?.child2Fun(); // calling child function
+    this.childDesg=this.child2?.desg; // accessing child variale and stroing
+  }
+  
 }
