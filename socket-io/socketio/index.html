@@ -7,16 +7,18 @@
     <title>Document</title>
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/JavaScript">
-        // function(){
-        //     // receive the value using document.getElementById("").value
-        //     // that value you can emit to server.
-        // }
+        function chat(){
+            // receive the value using document.getElementById("").value
+            // that value you can emit to server.
+        }
         var socket = io();
         socket.emit("chat message", "welcome to WebSocket using socketIo App")
     </script>
 </head>
 <body>
-    text field
-    button
+    <form>
+        <label>Name</label>
+        
+    </form>
 </body>
 </html>
